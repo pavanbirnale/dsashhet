@@ -1,0 +1,71 @@
+ Dynamic Programming :
+ If question has overlapping subproblem , input can be reduce smaller and smaller , have single base
+ case along with that Question has keywords like Longest , shortest , minimum , maximum , largest and
+ we have to return integer value, we have different choices that can gives the optimal solutions
+ then this type of problems are come under Dp.
+
+ Heap : 
+ If In question we have given k and along with that also keywords like smallest, largest etc 
+ are given and contains of question are very large then that question would be solve using Heap
+ because if we have given k then its Time complexity must be under log(k)
+
+ Binary Search : 
+ If the Question want some minimum/ maximum / at least type of things and we have multiple range of
+ answers that satisfies the given condition then we have to find inflection point of solution that 
+ will be the answer. so for that rather than checking linearly for all value we can use Binary Search
+ and Predicate Function
+
+Greedy : we have given relation between three things and finding locally optimal solution
+that can or can not be globally optimal. something like sorting or brute force like approach 
+can give the answer for Greedy problems. in Greedy we only make decision according to current 
+situation rather that thinking about future that mens choose locally optimal choice and proceed 
+ahead;
+
+Stack : If in question curr ans somehow depend on prev state or result then we have to use stack 
+in most cases stacks is used in string problems that means both string and stacks are used
+
+
+
+
+
+
+
+
+
+Keywords: 
+
+1). SubArray : sliding window , Two Pointer
+2). k : heap, map
+3). count : Dp
+4). find : Searching , Sorting ,Greedy
+5). Tree Terms : Greedy
+
+
+
+
+
+
+
+
+
+Dp Approaches : 
+1. Pick not-Pick Approach :
+   In this Approach we have several choices to pick or not pick the elements base on this choice our 
+   final answer directly affects so,
+   we can pick on prev skip only and not-pick/skip will be max of prev pick and prev skip 
+   eg.
+    loop{
+        npick = 0;
+        nskip = 0;
+
+        npick = nskip + someVal;
+        nskip = max(skip,pick);
+
+        pick = npick;
+        skip = nskip;
+    }
+
+
+
+Tricks and Tips :
+1. Use compare function to compare two string whether they are equal or not rather than using equability operator
